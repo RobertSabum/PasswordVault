@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Header extends Component{
+class ModificationBar extends Component{
     render(){
        return(
           <div>
-             <h1>ChainPass</h1>
+             <button>Add Password</button>
           </div>
        );
     }
   }
-  export default Header;
+  export default ModificationBar;

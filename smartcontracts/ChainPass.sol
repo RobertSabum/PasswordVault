@@ -42,6 +42,10 @@ contract ChainPass{
     function addPassword(string memory _url, string memory _username, string memory _password) public subscriberFunc{
         _accounts[msg.sender]._passwords.push([_url, _username, _password]);
     }
+
+    function deletePassword(uint _index) public subscriberFunc{
+        delete _accounts[msg.sender]._passwords[_index];
+    }
     
     function checkIfSubscribed() public view returns(bool){
         return hasSubscribed[msg.sender];

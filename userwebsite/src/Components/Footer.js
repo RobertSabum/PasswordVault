@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Modification extends Component{
+class Footer extends Component{
     render(){
        return(
           <div>
-             <h1>Hello World</h1>
+             <h2>ChainPass Password Manager</h2>
           </div>
        );
     }
   }
-  export default Modification;
+  export default Footer;
