@@ -12,4 +12,4 @@ I create a struct called account that contains the accounts user given name and 
 
 ### Frontend
 
-The front end will be built in ReactJS
+The front end will be built in ReactJS. It'll have components for main objects like a password container, individual passwords anda modification bar. Inside src I'll write all the web3 stuff into its own component so I dont re-write all the web3 code. for development I'll connect the site to the local host ganache blockchain and when it's deployed on the test net and IPFS it'll use metamask.
