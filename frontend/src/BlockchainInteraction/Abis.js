@@ -1,4 +1,4 @@
-export const ChainPassAbi = [
+export const ChainPassAbi = ([
 	{
 		"inputs": [
 			{
@@ -105,4 +105,6 @@ export const ChainPassAbi = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-]
+]);
+
+export default ChainPassAbi;
