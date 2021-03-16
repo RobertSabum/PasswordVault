@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Info from './Components/Info';
 import Passwords from './Components/Passwords';
-
-
 import samplepasswords from './BlockchainInteraction/SamplePasswordArray';
-
 import Web3 from 'web3';
 import ChainPassAbi from './BlockchainInteraction/Abis'
 
