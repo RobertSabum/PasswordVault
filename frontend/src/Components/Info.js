@@ -5,8 +5,8 @@ class Info extends Component{
     render(){
        return(
           <div className = 'info'>
-             <h5>{this.props.name}</h5>
-             <h5>{this.props.address}</h5>
+             <p>{this.props.name}</p>
+             <p>{this.props.address}</p>
           </div>
        );
     }

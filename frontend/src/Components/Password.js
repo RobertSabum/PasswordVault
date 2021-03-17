@@ -6,16 +6,11 @@ class Password extends Component{
 
        return(
           <div className = 'password'>
-             <p className = 'login-site'>{this.props.site}</p>
              <ul className = 'login-info'>
-               <ul className = 'u'>
-                  <p style = {{color: 'orange'}}>Username</p>
-                  <p>{this.props.username}</p>
-               </ul>
-               <ul className = 'p'>
-                  <p style = {{color: 'orange'}}>Password</p>
-                  <p>{this.props.password}</p>
-               </ul>
+               <li className = 'userpass'>
+                  <p>Username: <a style = {{color: 'white', paddingLeft: '45px', position: 'absolute'}}>{this.props.username}</a></p>
+                  <p>Password: <a style = {{color: 'white', paddingLeft: '47px', position: 'absolute'}}>{this.props.password}</a></p>   
+               </li>
              </ul>
           </div>
        );
