@@ -1,21 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
 
-
-.app{
-    color: rgb(255, 255, 255);
+body{
     background-color: rgb(44, 47, 54);
     font-family: 'Noto Sans JP', sans-serif;
     text-align: center;
 }
 
-.password{
+.app{
+    color: rgb(255, 255, 255);
+    
     
 }
 
-.login-site{
+#loginbutton{
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+    margin: auto;
+    outline: none;
+    border: none;
+    justify-content: center;
+    background-color: rgba(111, 49, 21, 0.44);
+    color: rgb(255, 197, 109);
+    font-size: 16px;
+}
 
+#loginbutton:hover{
+    background-color: rgba(77, 34, 15, 0.44);
+    cursor: pointer;
+}
+
+.passwords::-webkit-scrollbar {
+    display: none;
+  }
+  
+.passwords{
+    margin: auto;
+    width: 40%;
+    height: 200px;
+    border-style: none;
+    background-color: rgb(16, 18, 20);
+    border-radius: 50px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.password{
+    border-style: none;
+    padding: 10px;
+}
+
+
+
+.login-site{
+    
 }
 
 .login-info{
+    padding: 0;
+    list-style-type: none;
+    display: inline-flex;
+}
 
+.u{
+    padding-left: 0;
+    padding-right: 20;
+}
+
+.p{
+    padding-right: 0;
+    padding-left: 20;
 }

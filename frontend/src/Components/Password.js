@@ -5,16 +5,16 @@ class Password extends Component{
     render(){
 
        return(
-          <div id = 'password'>
-             <p id = 'login-site'>{this.props.site}</p>
-             <ul id = 'login-info'>
-               <ul>
-                  <li>Username</li>
-                  <li>{this.props.username}</li>
+          <div className = 'password'>
+             <p className = 'login-site'>{this.props.site}</p>
+             <ul className = 'login-info'>
+               <ul className = 'u'>
+                  <p style = {{color: 'orange'}}>Username</p>
+                  <p>{this.props.username}</p>
                </ul>
-               <ul>
-                  <li>Password</li>
-                  <li>{this.props.password}</li>
+               <ul className = 'p'>
+                  <p style = {{color: 'orange'}}>Password</p>
+                  <p>{this.props.password}</p>
                </ul>
              </ul>
           </div>

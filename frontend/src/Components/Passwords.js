@@ -11,8 +11,8 @@ class Passwords extends Component{
       )
 
        return(
-          <div id = 'passwords'>
-             {_passwords};
+          <div className = 'passwords'>
+             {_passwords}
           </div>
        );
     }
