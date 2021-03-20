@@ -127,13 +127,10 @@ body{
     border-width: 1px;
     position: absolute;
     top: 0;
+    justify-items: center;
 }
 
-.log-in-website:hover{
-    background-color: rgba(148, 148, 148, 0);
-    color: rgba(255, 255, 255, 0);
 
-}
 
 #add-password-window{
     border: solid;
