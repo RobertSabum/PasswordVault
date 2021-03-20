@@ -14,19 +14,19 @@ class Passwords extends Component{
          <div key = {i} className = 'site'>{p[0]}</div>
       );
 
-      var siteselectionvisibility = {visibility: 'hidden'};
+			const showsitesbutton = <button id = 'choosesite' onClick = {null}>Choose Site</button>;
 
        return(
             
             <div id = 'passwords'>
-               <button id = 'choosesite'>Choose Site</button>
+               {showsitesbutton}
                <div style = {{marginTop: '15%'}}>
                   <button className = 'modbutton'>Hide/Show</button> <button className = 'modbutton'>Add Password</button>
                </div>
                <div style = {{marginTop: '5%'}}>
                {_passwords[2]}
                </div>
-               <div className = 'siteselection' style = {siteselectionvisibility}>
+               <div className = 'siteselection'>
                {_sites}
                </div>
             </div>

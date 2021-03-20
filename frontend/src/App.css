@@ -120,6 +120,7 @@ body{
     border-style: solid;
     -ms-overflow-style: none;
     scrollbar-width: none;
+		visibility: hidden;
 }
 
 .siteselection::-webkit-scrollbar {

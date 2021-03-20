@@ -1,0 +1,28 @@
+{
+  "name": "ChainPass-1",
+  "version": "1.0.0",
+  "description": "## Goal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertSabum/ChainPass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobertSabum/ChainPass/issues"
+  },
+  "homepage": "https://github.com/RobertSabum/ChainPass#readme",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "web-vitals": "^1.1.1",
+    "web3": "^1.3.4"
+  }
+}
