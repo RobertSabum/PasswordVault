@@ -12,18 +12,18 @@ body{
     color: rgb(255, 255, 255);
 }
 
-#apptitle{
+#app-title{
     font-size: 38px;
     letter-spacing: 15px;
     font-family: 'Roboto Mono', monospace;
 }
 
-.info{
+#info{
     color: rgb(148, 148, 148);
     font-size: 14px;
 }
 
-#loginbutton{
+#login-button{
     background-color: rgb(0, 50, 70);
     border: none;
     border-radius: 20px;
@@ -37,43 +37,20 @@ body{
     width: 15%;
 }
 
-#loginbutton:hover{
+#login-button:hover{
     background-color: rgb(0, 50, 70, 0.5);
     color: rgb(255, 197, 109, 0.75);
     cursor: pointer;
 }
 
-#choosesite{
-    background-color: rgb(35, 35, 35);
-    border-color: rgba(255, 197, 109, 0.25);
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 1px;
-    color: rgb(255, 197, 109);
-    margin: auto;
-    margin-top: 3.5%;
-    outline: none;
-    padding: 8px;
-    transition-duration: 0.35s;
-    width: 80%;
-}
-
-
-
-#choosesite:hover{
-    background-color: rgba(35, 35, 35, 0.5);
-    color: rgb(255, 197, 109, 0.75);
-    cursor: pointer;
-}
-
-.modbutton{
+#add-password-button{
     background-color: rgb(0, 50, 70);
     border: none;
     border-radius: 20px;
     color: rgb(255, 197, 109);
     font-size: 12px;
     justify-content: center;
-    margin: auto;
+    margin-top: 10%;
     outline: none;
     padding: 20px;
     padding-bottom: 10px;
@@ -82,14 +59,14 @@ body{
     width: 25%;
 }
 
-.modbutton:hover{
+#add-password-button:hover{
     background-color: rgb(0, 50, 70, 0.5);
     color: rgb(255, 197, 109, 0.75);
     cursor: pointer;
 }
 
   
-#passwords{
+#password-accessor{
     -ms-overflow-style: none;
     background-color: rgb(20, 20, 20);
     border-color: rgb(67, 75, 83);
@@ -104,70 +81,90 @@ body{
     width: 30%;
 }
 
-.siteselection{
-    background-color: rgb(20, 20, 20);
-    border-color: rgb(255, 197, 109, 0.5);
-    border-radius: 10px;
-    border-style: solid;
+#passwords{
+    margin-top: 5%;
+    margin-left: 10%;
+    border: solid;
     border-width: 1px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
+    border-radius: 5px;
+    border-color: rgb(67, 75, 83);
+    height: 50%;
+    width: 80%;
     overflow-y: scroll;
-    border-style: solid;
     -ms-overflow-style: none;
     scrollbar-width: none;
-		visibility: hidden;
 }
-
-.siteselection::-webkit-scrollbar {
+#passwords::-webkit-scrollbar {
     display: none;
   }
 
-.site{
-    border-bottom: solid;
-    height: 23%;
-    border-width: 1px;
-    padding: 0;
-    border-color: rgb(255, 197, 109, 0.5);
-    font-size: 20px;
-    padding-top: 8%;
-}
-.site:hover{
-    background-color: rgb(40, 40, 40);
-    cursor: pointer;
-}
-
 .password{
-    border-color: rgba(255, 197, 109, 0.4);
+    border-color: rgb(0, 0, 0);
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     margin: auto;
-    padding: 10px;
-    padding-right: 120px;
-    width: 50%;
-}
-
-
-
-.login-site{
-    
-}
-
-.login-info{
-    display: inline-flex;
-    list-style-type: none;
     padding: 0;
+    width: 80%;
+    position: relative;
+    justify-content: center;
     
 }
 
-.userpass{
-    color: rgb(255, 197, 109, 0.6);
-    padding-left: 0;
-    position: relative;
-    
+
+.log-in-info{
+    color: rgb(148, 148, 148);
 }
+
+
+.log-in-website{
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    width: 100%;
+    height: 100%;
+    border: hidden;
+    background-color: rgb(148, 148, 148);
+    border-width: 1px;
+    position: absolute;
+    top: 0;
+}
+
+.log-in-website:hover{
+    background-color: rgba(148, 148, 148, 0);
+    color: rgba(255, 255, 255, 0);
+
+}
+
+#add-password-window{
+    border: solid;
+    border-color: rgb(67, 75, 83);
+    background-color: rgb(20, 20, 20);
+    border-radius: 50px;
+    border-width: 1px;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+    transition:visibility 0;
+
+    visibility: hidden;
+}
+
+#add-password-window-background{
+    transition-duration: 0.35s;
+    transition:visibility 0;
+    border: solid;
+    border-color: rgb(67, 75, 83);
+    background-color: rgba(0, 0, 0, 0.0);
+    border-width: 1px;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 110%;
+    visibility: hidden;
+}
+
