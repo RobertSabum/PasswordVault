@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Password from './Password';
+import AddPassword from './AddPassword';
 
 
 class Passwords extends Component {
@@ -11,14 +12,16 @@ class Passwords extends Component {
       );
 
       return (
-
-         <div id='password-accessor'>
-            <button id='add-password-button'>Add Password</button>
-            <div id = 'passwords'>
-               {_passwords}
+         <>
+            
+            <div id='password-accessor'>
+            <button id='add-password-button' onClick = {null}>Add Password</button>
+               <div id = 'passwords'>
+                  {_passwords}
+               </div>
             </div>
-         </div>
-
+            <AddPassword/>
+         </>
       );
    }
 }

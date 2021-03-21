@@ -11,6 +11,7 @@ const userAddress = '0x31F13dF8477f9D9a35e3A4b8260a4F2698CfdFcf';
 const userName = 'Robert';
    
 class App extends Component{
+   
   render(){
      return(
         <div className = 'app'>

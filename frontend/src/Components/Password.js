@@ -1,31 +1,40 @@
 import React, { Component } from 'react';
 
 class Password extends Component{
+   constructor(props) {
+      super(props);
+      this.state = {showPassword: false};
+    }
    
     render(){
-       var visible = true;
+      let visibility;
+      if (this.state.showPassword){
+         visibility = {
+            visibility: 'hidden',
+            opacity: '0'
+         };
+      }
+      else{
+         visibility = {
+            visibility: 'visible',
+            opacity: '1'
+         };
+      }
 
-      const hideonclick = (event) => (
-         event.target.style.visibility = 'hidden',
-         event.target.style.color = 'rgba(255, 255, 255, 0)',
-         event.target.style.backgroundColor = 'rgba(148, 148, 148, 0)',
-         visible = false);
+      const togglevisibility = (event) => {
+         event.preventDefault();
+         this.setState((oldState) => ({
+           showPassword: !oldState.showPassword,
+         }));
+       }
          
-      
-      const showonclick = (event) => (
-         event.target.style.visibility = 'visible',
-         event.target.style.color = 'rgba(255, 255, 255, 1)',
-         event.target.style.backgroundColor = 'rgba(148, 148, 148, 1)',
-         visible = true);
-         
-
       return(
          <div className = 'password'>
-            <div className = 'log-in-info'>
+            <div className = 'log-in-info' onClick={togglevisibility}>
                <p>Username: {this.props.username}</p>
                <p>Password: {this.props.password}</p>
             </div>
-            <div className = 'log-in-website' onClick = {visible? hideonclick : showonclick}>
+            <div className = 'log-in-website' onClick={togglevisibility} style = {visibility}>
                {this.props.website}
             </div>
          </div>
