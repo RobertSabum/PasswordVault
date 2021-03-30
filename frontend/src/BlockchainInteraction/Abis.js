@@ -1,5 +1,18 @@
 export const ChainPassAbi = ([
 	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "Registered",
+		"type": "event"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "string",
@@ -25,12 +38,25 @@ export const ChainPassAbi = ([
 	{
 		"inputs": [
 			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			}
+		],
+		"name": "deletePassword",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "address",
 				"name": "_user",
 				"type": "address"
 			}
 		],
-		"name": "grantAccess",
+		"name": "register",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -54,21 +80,8 @@ export const ChainPassAbi = ([
 		"type": "constructor"
 	},
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "_user",
-				"type": "address"
-			}
-		],
-		"name": "Subscribed",
-		"type": "event"
-	},
-	{
 		"inputs": [],
-		"name": "checkIfSubscribed",
+		"name": "checkIfRegistered",
 		"outputs": [
 			{
 				"internalType": "bool",

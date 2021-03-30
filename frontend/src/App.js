@@ -5,18 +5,19 @@ import AddPassword from './Components/AddPassword'
 import samplepasswords from './BlockchainInteraction/SamplePasswordArray';
 import Web3 from 'web3';
 import ChainPassAbi from './BlockchainInteraction/Abis'
-
-
-const userAddress = '0x31F13dF8477f9D9a35e3A4b8260a4F2698CfdFcf';
-const userName = 'Robert';
+var userAddress = '';
+var userName = '';
+const contractaddress = '0xFc3Dc277617A0C54AF3B02da3Ff617975E85C889';
    
 class App extends Component{
+  
+
    
   render(){
      return(
         <div className = 'app'>
            <h1 id = 'appt-title'>CHAIN PASS</h1>
-           <button id = 'login-button'>Connect Wallet</button>
+           <button id = 'login-button' onClick = {this.loadWeb3}>Connect Wallet</button>
            <Info name = {userName} address = {userAddress}/>
            <Passwords storedpasswords = {samplepasswords}/>
            <AddPassword />
