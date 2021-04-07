@@ -14,16 +14,16 @@ class App extends Component{
   render(){
 	
    //adding blockchain interaction
-     const Web3 = require('web3');
-     
-     const init = async () => {
-        const web3 = new Web3('http://localhost:8485');
-        const contract = new web3.eth.Contract(ChainPassAbi, deployedNetwork.address);
-        
-        
-        //Loading all the user info
-        
+      const Web3 = require('web3');
+      const init = async () => {
+      const web3 = new Web3('http://localhost:7545');
+         const contract = new web3.eth.Contract(
+            ChainPassAbi, 
+            '0x2dCff58453Eda36f9fBe371d566c8c449c901813'
+         );       
      }
+
+     init();
 	
 	  
    //maps a password from the password array to an array of password components
