@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Password from './Components/Password';
 import passarray from './BlockchainInteraction/SamplePasswordArray';
-import Web3 from 'web3';
-import ChainPassAbi from './BlockchainInteraction/Abis'
-const contractaddress = '0xFc3Dc277617A0C54AF3B02da3Ff617975E85C889';
    
 class App extends Component{
    //contains the state of the users address, username, and stored passwords
@@ -14,7 +11,22 @@ class App extends Component{
    }
 
   render(){
-
+	/*
+   //adding blockchain interaction
+     const Web3 = require('web3');
+     const contractInfo = require(json for truffle project);
+     const init = async () => {
+        const web3 = new Web3('http://localhost:8485');
+        const id = await web3.eth.net.getId();
+        const deployedNetwork = contractInfo.networks[id];
+        const contract = new web3.eth.Contract(contractInfo.abi, deployedNetwork.address);
+        
+        
+        //Loading all the user info
+        
+     }
+	*/
+	  
    //maps a password from the password array to an array of password components
    const _passwords = this.state.passwords.map((p, i) =>
          p[0] && <Password key={i} website={p[0]} username={p[1]} password={p[2]} />
