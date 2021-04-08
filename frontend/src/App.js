@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Password from './Components/Password';
 import passarray from './Testing/SamplePasswordArray';
 import ChainPassAbi from './abis/Abis'
+import PasswordContainer from './Components/PasswordContainer';
+
 
 class App extends Component{
    //contains the state of the users address, username, and stored passwords
@@ -24,12 +25,6 @@ class App extends Component{
      }
 
      init();
-	
-	  
-   //maps a password from the password array to an array of password components
-   const _passwords = this.state.passwords.map((p, i) =>
-         p[0] && <Password key={i} website={p[0]} username={p[1]} password={p[2]} />
-      );
 
    //temporary variables to store info from multiple input fields
    var tpass, tname, tsite;
@@ -37,9 +32,15 @@ class App extends Component{
    //called when a password wants to be added
    const addpassword = (e) => {
       e.preventDefault(); //So the page does not refresh
-      passarray.push([tsite, tname, tpass]);//adds the temporary variables set above to the password array
-      console.log('added new password');
-      updatepasswords();//updates the state of the stored passwords
+      if(tsite && tname && tpass){
+         passarray.push([tsite, tname, tpass]);//adds the temporary variables set above to the password array
+         console.log('added new password');
+         updatepasswords();//updates the state of the stored passwords
+      }
+      else{
+         console.log('incomplete information');
+         window.alert('You need to fill all fields');
+      }
    }
 
    //functions to continuously update the above temporary variables whenever their respective input field is edited
@@ -101,9 +102,7 @@ class App extends Component{
                   <button onClick = {addpassword} id='add-password-button'>Add Password</button>
                </div>
 
-               <div id = 'passwords'>
-                  {_passwords}
-               </div>
+               <PasswordContainer passwordData = {this.state.passwords}/>
             </div>
         </div>
      );
