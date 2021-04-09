@@ -52,7 +52,7 @@ class App extends Component{
       //called when a password wants to be added
       const addNewPassword = (site, name, pass) => {
          if(site && name && pass){
-            passarray.push([site, name, pass]);//adds the temporary variables set above to the password array
+            passArray.push([site, name, pass]);//adds the temporary variables set above to the password array
             console.log('added new password');
             updatePasswords();//updates the state of the stored passwords
          }

@@ -33,12 +33,12 @@ class Password extends Component{
         
      return(
         <div className = 'password'>
-           <div className = 'log-in-info' onClick={togglevisibility}>
+           <div className = 'log-in-info' onDoubleClick={togglevisibility}>
               <p>Username: {this.props.username}</p>
               <p>Password: {this.props.password}</p>
            </div>
            
-           <div className = 'log-in-website' onClick={togglevisibility} style = {visibility}>
+           <div className = 'log-in-website' onDoubleClick={togglevisibility} style = {visibility}>
               {this.props.website}
            </div>
         </div>

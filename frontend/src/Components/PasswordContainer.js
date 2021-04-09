@@ -1,5 +1,5 @@
 import React from 'react';
-import Password from './Components/Password';
+import Password from './Password';
 
 const PasswordContainer = ({passwordData}) =>{
     

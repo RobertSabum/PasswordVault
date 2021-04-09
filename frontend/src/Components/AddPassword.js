@@ -19,7 +19,7 @@ class AddPassword extends Component{
 
         const addPassword = (e) =>{
             e.preventDefault()
-            this.props.addNewPassword(this.state)
+            this.props.addNewPassword(this.state.site, this.state.site, this.state.site)
         }
 
 
