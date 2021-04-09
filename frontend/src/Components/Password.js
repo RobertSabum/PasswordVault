@@ -34,11 +34,11 @@ class Password extends Component{
      return(
         <div className = 'password'>
            <div className = 'log-in-info' onDoubleClick={togglevisibility}>
-              <p>Username: {this.props.username}</p>
-              <p>Password: {this.props.password}</p>
+              <p onClick = {() => {navigator.clipboard.writeText(this.props.username)}}>Username: {this.props.username}</p>
+              <p onClick = {() => {navigator.clipboard.writeText(this.props.password)}}>Password: {this.props.password}</p>
            </div>
            
-           <div className = 'log-in-website' onDoubleClick={togglevisibility} style = {visibility}>
+           <div className = 'log-in-website' onDoubleClick ={togglevisibility} style = {visibility}>
               {this.props.website}
            </div>
         </div>

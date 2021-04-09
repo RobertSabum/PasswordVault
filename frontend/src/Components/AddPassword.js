@@ -19,12 +19,12 @@ class AddPassword extends Component{
 
         const addPassword = (e) =>{
             e.preventDefault()
-            this.props.addNewPassword(this.state.site, this.state.site, this.state.site)
+            this.props.addNewPassword(this.state.site, this.state.name, this.state.pass);
         }
 
 
         return(
-            <div id = 'addpasswordbox'>
+            <div>
                 <form onSubmit = {null}>
                     <input onChange = {updateData} type="text" placeholder = "Username" className = 'infoinput' id = "name"/>
                

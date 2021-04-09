@@ -50,7 +50,7 @@ body{
     color: rgb(255, 197, 109);
     font-size: 12px;
     justify-content: center;
-    margin: 5% auto 10% auto;
+    margin: 5% auto 5% auto;
     outline: none;
     padding: 20px;
     padding-bottom: 10px;
@@ -63,6 +63,11 @@ body{
     background-color: rgb(0, 50, 70, 0.5);
     color: rgb(255, 197, 109, 0.75);
     cursor: pointer;
+}
+
+#instructions{
+    color: rgb(148, 148, 148);
+    font-size: 14px;
 }
 
   
@@ -131,8 +136,6 @@ body{
     justify-items: center;
 }
 
-#addpasswordbox{
-}
 
 .infoinput{
     background-color: rgb(70, 70, 70);

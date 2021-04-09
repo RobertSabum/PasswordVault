@@ -16,17 +16,17 @@ class App extends Component{
 
    render(){
 	
-      // //adding blockchain interaction
-      // const Web3 = require('web3');
-      // const init = async () => {
-      //    const web3 = new Web3('http://localhost:7545');
-      //    const contract = new web3.eth.Contract(
-      //       ChainPassAbi, 
-      //       '0x2dCff58453Eda36f9fBe371d566c8c449c901813'
-      //    );       
-      // }
+      //adding blockchain interaction
+      const Web3 = require('web3');
+      const init = async () => {
+         const web3 = new Web3('http://localhost:7545');
+         const contract = new web3.eth.Contract(
+            ChainPassAbi, 
+            '0xB7493737E79f819678119febfAd3524281f0560e'
+         );     
+      }
 
-      // init();
+      init();
 
       //updates the state of the password state element
       const updatePasswords = (e) =>{
@@ -56,10 +56,6 @@ class App extends Component{
             console.log('added new password');
             updatePasswords();//updates the state of the stored passwords
          }
-         else{
-            console.log('incomplete information');
-            window.alert('You need to fill all fields');
-         }
       }
 
       return(
@@ -75,7 +71,8 @@ class App extends Component{
             </div>
 
             <div id='password-accessor'>
-               <AddPassword addNewPassword = {this.addNewPassword}/>
+               <AddPassword addNewPassword = {addNewPassword}/>
+               <p id = 'instructions'>Double click to view info, Click item to copy</p>
                <PasswordContainer passwordData = {this.state.passwords}/>
             </div>
          </div>
